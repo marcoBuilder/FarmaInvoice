@@ -1,0 +1,16 @@
+.table-row-cell:selected {
+    -fx-background-color: steelblue;
+    -fx-text-background-color: #e9e9e9;
+}
+
+#colDettagliPdf{
+    -fx-alignment: CENTER;
+}
+
+#colNumero,#colImporto,#colPartitaIva{
+    -fx-alignment: CENTER;
+}
+
+#colData,#colDenominazione,#colTipoDoc{
+    -fx-alignment: CENTER;
+}

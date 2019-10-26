@@ -1,0 +1,31 @@
+220---------- Welcome to Pure-FTPd [privsep] [TLS] ----------
+220-You are user number 2 of 50 allowed.
+220-Local time is now 04:36. Server port: 21.
+220-This is a private system - No anonymous login
+220-IPv6 connections are also welcome on this server.
+220 You will be disconnected after 15 minutes of inactivity.
+USER 01600880718@klugesoftware.com
+331 User 01600880718@klugesoftware.com OK. Password required
+PASS FatturEl01!
+230 OK. Current restricted directory is /
+TYPE I
+200 TYPE is now 8-bit binary
+CWD /backup/xmlPassive
+250 OK. Current directory is /backup/xmlPassive
+PASV
+227 Entering Passive Mode (216,231,128,40,196,206)
+STOR 20190605_1008106147_26035581_IT01641790702_ekOb9.xml
+150 Accepted data connection
+226-File successfully transferred
+226 0.291 seconds (measured here), 41.39 Kbytes per second
+CWD /xmlPassive
+250 OK. Current directory is /xmlPassive
+PASV
+227 Entering Passive Mode (216,231,128,40,238,99)
+STOR 20190605_1008106147_26035581_IT01641790702_ekOb9.xml
+150 Accepted data connection
+226-File successfully transferred
+226 0.290 seconds (measured here), 41.44 Kbytes per second
+QUIT
+221-Goodbye. You uploaded 25 and downloaded 0 kbytes.
+221 Logout.

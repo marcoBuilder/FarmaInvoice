@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="600.0" prefWidth="1250.0" stylesheets="@../css/ElencoHeaderFatture.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.klugesoftware.farmainvoice.controller.ElencoFattureHeaderController">
+   <top>
+      <Pane prefHeight="89.0" prefWidth="1239.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="-1.0" prefHeight="90.0" prefWidth="1250.0">
+               <children>
+                  <Pane prefHeight="90.0" prefWidth="79.0">
+                     <children>
+                        <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/logo-temp.jpg" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="159.0" prefWidth="61.0">
+                     <children>
+                        <ImageView fitHeight="57.0" fitWidth="50.0" layoutX="6.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8-menu_2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="100.0" prefWidth="12.0" />
+                  <Pane prefHeight="87.0" prefWidth="1097.0">
+                     <children>
+                        <TextField layoutX="487.0" layoutY="24.0" prefHeight="43.0" prefWidth="539.0" promptText="ricerca..." />
+                        <ImageView fitHeight="29.0" fitWidth="34.0" layoutX="1040.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icons8-search.png" />
+                           </image>
+                        </ImageView>
+                        <RadioButton layoutX="26.0" layoutY="15.0" mnemonicParsing="false" text="Fatture Ricevute">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </RadioButton>
+                        <RadioButton layoutX="26.0" layoutY="51.0" mnemonicParsing="false" text="Fatture Emesse">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </RadioButton>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.1794871794871795" BorderPane.alignment="CENTER">
+         <items>
+            <ScrollPane pannable="true">
+               <content>
+                  <VBox prefHeight="491.0" prefWidth="223.0">
+                     <children>
+                        <VBox alignment="BASELINE_LEFT" prefHeight="403.0" prefWidth="203.0" spacing="10.0">
+                           <children>
+                              <ComboBox prefWidth="150.0" />
+                              <RadioButton graphicTextGap="5.0" mnemonicParsing="false" text="tutti i mesi">
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </RadioButton>
+                              <RadioButton mnemonicParsing="false" text="gennaio" />
+                              <RadioButton mnemonicParsing="false" text="febbraio" />
+                              <RadioButton mnemonicParsing="false" text="marzo" />
+                              <RadioButton mnemonicParsing="false" text="aprile" />
+                              <RadioButton mnemonicParsing="false" text="maggio" />
+                              <RadioButton mnemonicParsing="false" text="giugno" />
+                              <RadioButton mnemonicParsing="false" text="luglio" />
+                              <RadioButton mnemonicParsing="false" text="agosto" />
+                              <RadioButton mnemonicParsing="false" text="settembre" />
+                              <RadioButton mnemonicParsing="false" text="ottobre" />
+                              <RadioButton mnemonicParsing="false" text="novembre" />
+                              <RadioButton mnemonicParsing="false" text="dicembre" />
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </VBox>
+                        <Pane prefHeight="85.0" prefWidth="223.0">
+                           <children>
+                              <Label layoutX="12.0" layoutY="15.0" text="da" />
+                              <Label layoutX="20.0" layoutY="46.0" text="a" />
+                              <DatePicker layoutX="41.0" layoutY="10.0" prefHeight="25.0" prefWidth="161.0" />
+                              <DatePicker layoutX="41.0" layoutY="41.0" prefHeight="25.0" prefWidth="161.0" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" prefHeight="492.0" prefWidth="1014.0" vbarPolicy="NEVER">
+               <content>
+                  <TableView fx:id="tableElencoHeader" prefHeight="476.0" prefWidth="964.0">
+                    <columns>
+                        <TableColumn fx:id="colCheckBox" editable="false" prefWidth="45.0" sortable="false" />
+                      <TableColumn fx:id="colNumero" editable="false" prefWidth="125.0" text="numero" />
+                      <TableColumn fx:id="colData" editable="false" prefWidth="165.0" text="data" />
+                        <TableColumn fx:id="colImporto" editable="false" prefWidth="134.0" text="importo" />
+                        <TableColumn fx:id="colDenominazione" editable="false" prefWidth="239.0" text="denominazione" />
+                        <TableColumn fx:id="colPartitaIva" editable="false" prefWidth="177.0" text="partitaIva" />
+                        <TableColumn fx:id="colTipoDoc" editable="false" prefWidth="122.0" text="tipo" />
+                        <TableColumn fx:id="colDettagliPdf" editable="false" prefWidth="60.0" />
+                    </columns>
+                  </TableView>
+               </content>
+            </ScrollPane>
+         </items>
+      </SplitPane>
+   </center>
+   <bottom>
+      <Pane BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="1157.0" text="Cifarma Srl" />
+         </children>
+      </Pane>
+   </bottom>
+</BorderPane>
